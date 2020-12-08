@@ -5,7 +5,7 @@ if number > 0:
     last_digit = number % 10
 else:
     negative = number * -1
-    last_digit = negative % 10
+    last_digit = (negative % 10) * -1
 if last_digit > 5:
     result = "and is greater than 5"
 elif last_digit == 0:
