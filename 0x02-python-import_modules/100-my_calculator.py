@@ -5,10 +5,12 @@ if __name__ == "__main__":
     operators = ["+", "-", "*", "/"]
     x = sys.argv
     if len(x) != 4:
-        (print("{}".format("Usage: ./100-my_calculator.py <a> <operator> <b>")))
+        (print("{}"
+        .format("Usage: ./100-my_calculator.py <a> <operator> <b>")))
         exit(1)
     if not x[2] in operators:
-        (print("{}".format("Unknown operator. Available operators: +, -, * and /")))
+        (print("{}"
+        .format("Unknown operator. Available operators: +, -, * and /")))
         exit(1)
     a = int(x[1])
     b = int(x[3])
