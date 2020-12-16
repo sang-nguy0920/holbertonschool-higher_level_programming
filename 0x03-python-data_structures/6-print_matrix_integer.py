@@ -2,7 +2,7 @@
 def print_matrix_integer(matrix=[[]]):
     if matrix:
         for row in range(len(matrix)):
-            for element in range (len(matrix[row])):
+            for element in range(len(matrix[row])):
                 if element != len(matrix[row]) - 1:
                     punc = " "
                 else:
