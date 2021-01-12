@@ -5,6 +5,7 @@
 class Rectangle:
     """Rectangle class"""
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """Instantiation with optional width and height"""
         self.width = width
@@ -67,5 +68,3 @@ class Rectangle:
         """deletes rectangle instance"""
         Rectangle.number_of_instances -= 1
         return print('Bye rectangle...')
-
-    
