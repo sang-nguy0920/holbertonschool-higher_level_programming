@@ -55,4 +55,4 @@ class Rectangle:
         if self.__width != 0 and self.__height != 0:
             for i in range(self.__height):
                 x += str('#' * self.__width) + '\n'
-            return x[:-1]
+        return x[:-1]
