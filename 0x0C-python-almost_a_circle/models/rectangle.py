@@ -4,6 +4,7 @@
 
 from models.base import Base
 
+
 class Rectangle(Base):
     """ class Rectangle that inherits from Base """
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -84,3 +85,8 @@ class Rectangle(Base):
             for w in range(self.__width):
                 print('#', end="")
             print()
+
+    def __str__(self):
+        """returns string rep of rectangle"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height)
