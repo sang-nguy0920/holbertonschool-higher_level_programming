@@ -49,6 +49,19 @@ class Base:
         if cls.__name__ is "Rectangle":
             dummy = cls(1, 1)
         elif cls.__name__ is "Square":
-            dummy = clas(1)
+            dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        filename = cls.__name__ + ".json"
+        list_instances = []
+        if os.path.isfile(filename):
+            with open(filename) as f:
+                io = cls.from_json_string(f.read())
+                for id in io:
+                    list_instances.append(cls.create(**id))
+                return list_instances
+        else:
+            return []
