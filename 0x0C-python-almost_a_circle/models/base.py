@@ -5,9 +5,11 @@
 import os
 import json
 
+
 class Base:
     """Base class"""
     __nb_objects = 0
+
     def __init__(self, id=None):
         """Inits Base instance"""
         if id is not None:
@@ -22,3 +24,14 @@ class Base:
         if list_dictionaries is None:
             list_dictionaries = []
         return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """writes the JSON string representation of list_objs to a file"""
+        filename = cls.__name__ + ".json"
+        list_object = []
+        if list_objs is not None:
+            for i in list_objs:
+                list_object.append(cls.to_dictionary(i))
+        with open(filename, 'w') as f:
+            f.write(cls.to_json_string(list_object))
