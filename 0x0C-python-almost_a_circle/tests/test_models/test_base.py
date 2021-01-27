@@ -38,5 +38,29 @@ class TestsBase(unittest.TestCase):
         """Tests"""
         self.assertTrue(len(create.__doc__) > 0)
 
+    def test_docs1(self):
+        """Tests"""
+        self.assertTrue(len(base.__doc__) > 0)
+
+    def test_to1(self):
+        """Tests"""
+        self.assertTrue(len(to_json_string.__doc__) > 0)
+
+    def test_from1(self):
+        """Tests"""
+        self.assertTrue(len(from_json_string.__doc__) > 0)
+
+    def test_save1(self):
+        """Tests"""
+        self.assertTrue(len(save_to_file.__doc__) > 0)
+
+    def test_load1(self):
+        """Tests"""
+        self.assertTrue(len(load_from_file.__doc__) > 0)
+
+    def test_create1(self):
+        """Tests"""
+        self.assertTrue(len(create.__doc__) > 0)
+
 if __name__ == '__main__':
     unittest.main()
