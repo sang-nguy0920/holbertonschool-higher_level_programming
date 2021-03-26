@@ -19,7 +19,8 @@ def goto_db():
 def list_states(database):
     """lists all states in database"""
     cur = database.cursor()
-    cur.execute("SELECT * FROM states WHERE BINARY name='{:s}' ORDER BY id ASC".format(sys.argv[4]))
+    cur.execute("SELECT * FROM states WHERE BINARY name='{:s}' \
+                ORDER BY id ASC".format(sys.argv[4]))
     get_rows = cur.fetchall()
     for row in get_rows:
             print(row)
