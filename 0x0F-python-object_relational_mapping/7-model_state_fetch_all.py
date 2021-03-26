@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Start link class to table in database 
+Start link class to table in database
 """
 
 
@@ -9,13 +9,16 @@ from model_state import Base, State
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
+
 def session_st():
     """fill in later for checker"""
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]))
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
+                           .format(sys.argv[1], sys.argv[2], sys.argv[3]))
 
     Session = sessionmaker(bind=engine)
     session = Session()
     return (engine, session)
+
 
 def list_states(database):
     """lists all states in database"""
